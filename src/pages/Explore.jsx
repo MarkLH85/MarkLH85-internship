@@ -21,7 +21,7 @@ const Explore = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-12 text-center">
-                  <h1>Explore</h1>
+                  <h1 data-aos="fade-up">Explore</h1>
                 </div>
                 <div className="clearfix"></div>
               </div>
@@ -42,3 +42,4 @@ const Explore = () => {
 };
 
 export default Explore;
+

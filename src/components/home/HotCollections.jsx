@@ -78,8 +78,7 @@ const HotCollections = () => {
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
-        <div className="text-center">
-          <h2>Hot Collections</h2>
+        <div className="text-center" data-aos="fade-up"><h2>Hot Collections</h2>
           <div className="small-border bg-color-2"></div>
         </div>
 
@@ -89,9 +88,7 @@ const HotCollections = () => {
           <>
             <div ref={sliderRef} className="keen-slider">
               {collections.map((collection) => (
-                <div
-                  className="keen-slider__slide"
-                  key={collection.id}
+                <div data-aos="fade-up" className="keen-slider__slide" key={collection.id}
                 >
                   <div className="nft_coll">
                     <div className="nft_wrap">
@@ -150,3 +147,4 @@ const HotCollections = () => {
 };
 
 export default HotCollections;
+
