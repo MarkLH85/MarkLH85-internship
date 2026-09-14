@@ -66,3 +66,4 @@ const NFTCard = ({ item }) => {
 };
 
 export default NFTCard;
+
