@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Skeleton from "../UI/Skeleton";
+import NFTCard from "../NFT/NFTCard";
 
 const NewItems = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [now, setNow] = useState(Date.now());
 
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
@@ -39,14 +38,6 @@ const NewItems = () => {
   });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setNow(Date.now());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
     axios
       .get("https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems")
       .then((response) => {
@@ -59,21 +50,6 @@ const NewItems = () => {
         setLoading(false);
       });
   }, []);
-
-  const getCountdown = (expiryDate) => {
-    if (!expiryDate) return "No expiration";
-
-    const remainingSeconds = Math.max(
-      0,
-      Math.floor((expiryDate - now) / 1000)
-    );
-
-    const hours = Math.floor(remainingSeconds / 3600);
-    const minutes = Math.floor((remainingSeconds % 3600) / 60);
-    const seconds = remainingSeconds % 60;
-
-    return `${hours}h ${minutes}m ${seconds}s`;
-  };
 
   const renderSkeleton = () => (
     <div ref={sliderRef} className="keen-slider">
@@ -120,57 +96,7 @@ const NewItems = () => {
             <div ref={sliderRef} className="keen-slider">
               {items.map((item) => (
                 <div className="keen-slider__slide" key={item.id}>
-                  <div className="nft">
-                    <div className="nft__item">
-                      <div className="author_list_pp">
-                        <Link to={`/author/${item.authorId}`}>
-                          <img
-                            className="lazy"
-                            src={item.authorImage}
-                            alt={item.title}
-                          />
-                        </Link>
-                      </div>
-
-                      <div className="de_countdown">
-                        {getCountdown(item.expiryDate)}
-                      </div>
-
-                      <div className="nft__item_wrap">
-                        <Link to={`/item-details/${item.nftId}`}>
-                          <img
-                            src={item.nftImage}
-                            className="lazy img-fluid"
-                            alt={item.title}
-                          />
-                        </Link>
-                      </div>
-
-                      <div className="nft__item_info">
-                        <Link to={`/item-details/${item.nftId}`}>
-                          <h4>{item.title}</h4>
-                        </Link>
-
-                        <div className="nft__item_price">
-                          {item.price} ETH
-                        </div>
-
-                        <div className="nft__item_like">
-                          <i className="fa fa-heart"></i> {item.likes}
-                        </div>
-
-                        <div className="spacer-10"></div>
-
-                        <div className="nft__item_action">
-                          <a href="">Place a bid</a>
-                        </div>
-
-                        <div className="nft__item_share">
-                          <a href="">Share</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <NFTCard item={item} />
                 </div>
               ))}
             </div>
