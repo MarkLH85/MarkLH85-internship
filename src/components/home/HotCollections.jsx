@@ -88,7 +88,7 @@ const HotCollections = () => {
           <>
             <div ref={sliderRef} className="keen-slider">
               {collections.map((collection) => (
-                <div data-aos="fade-up" className="keen-slider__slide" key={collection.id}
+                <div className="keen-slider__slide" key={collection.id}
                 >
                   <div className="nft_coll">
                     <div className="nft_wrap">

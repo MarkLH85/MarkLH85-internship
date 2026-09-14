@@ -89,10 +89,15 @@ const ExploreItems = () => {
 
       {loading ? (
         renderSkeleton()
-      ) : (
-        items.slice(0, visibleCount).map((item) => (
-          <NFTCard key={item.id} item={item} />
-        ))
+      ) : (            items.slice(0, visibleCount).map((item) => (
+              <div
+                key={item.id}
+                className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
+                style={{ display: "block", backgroundSize: "cover" }}
+              >
+                <NFTCard item={item} />
+              </div>
+            ))
       )}
 
       {!loading && visibleCount < items.length && (
