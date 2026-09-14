@@ -50,11 +50,11 @@ const NFTCard = ({ item }) => {
           <div className="spacer-10"></div>
 
           <div className="nft__item_action">
-            <a href="">Place a bid</a>
+            <button type="button">Place a bid</button>
           </div>
 
           <div className="nft__item_share">
-            <a href="">Share</a>
+            <button type="button">Share</button>
           </div>
         </div>
       </div>

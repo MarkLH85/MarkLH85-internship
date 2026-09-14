@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NFTCard from "../NFT/NFTCard";
 
 const AuthorItems = ({ items = [], authorImage }) => {
