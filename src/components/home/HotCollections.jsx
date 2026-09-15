@@ -126,7 +126,6 @@ const HotCollections = () => {
               <button
                 type="button"
                 className="hot-collections-prev" onClick={() => instanceRef.current?.prev()}
-                style={{ marginRight: "10px" }}
               >
                 <i className="fa fa-chevron-left"></i>
               </button>

@@ -16791,3 +16791,10 @@ img {
     right: 5px;
   }
 }
+
+ /* Reviewer Hot Collections image adjustment */
+#section-collections .nft_wrap img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}

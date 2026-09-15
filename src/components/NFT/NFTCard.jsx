@@ -48,15 +48,7 @@ const NFTCard = ({ item }) => {
           </div>
 
           <div className="spacer-10"></div>
-
-          <div className="nft__item_action">
-            <button type="button">Place a bid</button>
-          </div>
-
-          <div className="nft__item_share">
-            <button type="button">Share</button>
-          </div>
-        </div>
+</div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Author from "./pages/Author";
 import ItemDetails from "./pages/ItemDetails";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -23,7 +24,8 @@ function App() {
         <Route path="/author/:id" element={<Author />} />
         <Route path="/item-details/:id" element={<ItemDetails />} />
       </Routes>
-    </Router>
+          <Footer />
+      </Router>
   );
 }
 
