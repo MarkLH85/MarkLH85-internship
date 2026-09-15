@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import AuthorBanner from "../images/author_banner.jpg";
 import AuthorItems from "../components/author/AuthorItems";
 import Skeleton from "../components/UI/Skeleton";
+import Nav from "../components/Nav";
 
 const Author = () => {
   const { id } = useParams();
@@ -63,6 +64,7 @@ const Author = () => {
 
   return (
     <div id="wrapper">
+      <Nav />
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
 
@@ -146,3 +148,6 @@ const Author = () => {
 };
 
 export default Author;
+
+
+

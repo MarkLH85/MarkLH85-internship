@@ -16714,3 +16714,80 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+/* Hot Collections carousel navigation */
+#section-collections {
+  position: relative;
+}
+
+#section-collections .hot-collections-controls {
+  position: static;
+}
+
+#section-collections .hot-collections-prev,
+#section-collections .hot-collections-next {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#section-collections .hot-collections-prev {
+  left: -22px;
+}
+
+#section-collections .hot-collections-next {
+  right: -22px;
+}
+
+@media (max-width: 767px) {
+  #section-collections .hot-collections-prev {
+    left: 5px;
+  }
+
+  #section-collections .hot-collections-next {
+    right: 5px;
+  }
+}
+
+/* Final Hot Collections alignment */
+#section-collections > .container {
+  position: relative;
+}
+
+#section-collections .nft_coll_pp {
+  margin-top: -30px !important;
+  position: relative;
+  z-index: 2;
+}
+
+#section-collections .hot-collections-prev,
+#section-collections .hot-collections-next {
+  top: 50%;
+}
+
+#section-collections .hot-collections-prev {
+  left: -22px;
+}
+
+#section-collections .hot-collections-next {
+  right: -22px;
+}
+
+@media (max-width: 767px) {
+  #section-collections .hot-collections-prev {
+    left: 5px;
+  }
+
+  #section-collections .hot-collections-next {
+    right: 5px;
+  }
+}

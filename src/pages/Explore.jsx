@@ -1,3 +1,4 @@
+﻿import Nav from "../components/Nav";
 import React, { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
@@ -9,6 +10,7 @@ const Explore = () => {
 
   return (
     <div id="wrapper">
+      <Nav />
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
 
@@ -42,4 +44,5 @@ const Explore = () => {
 };
 
 export default Explore;
+
 

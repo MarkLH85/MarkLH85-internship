@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EthImage from "../images/ethereum.svg";
 import { Link, useParams } from "react-router-dom";
 import Skeleton from "../components/UI/Skeleton";
+import Nav from "../components/Nav";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -34,6 +35,7 @@ const ItemDetails = () => {
   if (loading) {
     return (
       <div id="wrapper">
+      <Nav />
         <div className="no-bottom no-top" id="content">
           <div id="top"></div>
           <section aria-label="section" className="mt90 sm-mt-0">
@@ -68,6 +70,7 @@ const ItemDetails = () => {
 
   return (
     <div id="wrapper">
+      <Nav />
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
         <section aria-label="section" className="mt90 sm-mt-0">
@@ -180,3 +183,6 @@ const ItemDetails = () => {
 };
 
 export default ItemDetails;
+
+
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useKeenSlider } from "keen-slider/react";
@@ -16,26 +16,25 @@ const HotCollections = () => {
       spacing: 24,
     },
     breakpoints: {
-      "(max-width: 991px)": {
+      "(max-width: 1199px)": {
         slides: {
           perView: 3,
           spacing: 20,
         },
       },
-      "(max-width: 767px)": {
+      "(max-width: 991px)": {
         slides: {
           perView: 2,
           spacing: 16,
         },
       },
-      "(max-width: 575px)": {
+      "(max-width: 767px)": {
         slides: {
           perView: 1,
           spacing: 12,
         },
       },
-    },
-  });
+    },  });
 
   useEffect(() => {
     axios
@@ -123,20 +122,20 @@ const HotCollections = () => {
               ))}
             </div>
 
-            <div className="text-center" style={{ marginTop: "30px" }}>
+            <div className="hot-collections-controls">
               <button
                 type="button"
-                onClick={() => instanceRef.current?.prev()}
+                className="hot-collections-prev" onClick={() => instanceRef.current?.prev()}
                 style={{ marginRight: "10px" }}
               >
-                Previous
+                <i className="fa fa-chevron-left"></i>
               </button>
 
               <button
                 type="button"
-                onClick={() => instanceRef.current?.next()}
+                className="hot-collections-next" onClick={() => instanceRef.current?.next()}
               >
-                Next
+                <i className="fa fa-chevron-right"></i>
               </button>
             </div>
           </>
@@ -147,4 +146,9 @@ const HotCollections = () => {
 };
 
 export default HotCollections;
+
+
+
+
+
 
