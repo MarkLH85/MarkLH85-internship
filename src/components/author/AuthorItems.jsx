@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import NFTCard from "../NFT/NFTCard";
 
 const AuthorItems = ({ items = [], authorImage }) => {

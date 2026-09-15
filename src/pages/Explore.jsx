@@ -1,4 +1,4 @@
-﻿import Nav from "../components/Nav";
+import Nav from "../components/Nav";
 import React, { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
