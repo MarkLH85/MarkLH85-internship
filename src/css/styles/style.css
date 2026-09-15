@@ -16798,3 +16798,50 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+/* New Items carousel navigation */
+#section-items {
+  position: relative;
+}
+
+#section-items > .container {
+  position: relative;
+}
+
+#section-items .new-items-controls {
+  position: static;
+}
+
+#section-items .new-items-prev,
+#section-items .new-items-next {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#section-items .new-items-prev {
+  left: -22px;
+}
+
+#section-items .new-items-next {
+  right: -22px;
+}
+
+@media (max-width: 767px) {
+  #section-items .new-items-prev {
+    left: 5px;
+  }
+
+  #section-items .new-items-next {
+    right: 5px;
+  }
+}

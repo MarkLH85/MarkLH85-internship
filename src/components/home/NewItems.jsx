@@ -99,21 +99,23 @@ const NewItems = () => {
                 </div>
               ))}
             </div>
-
-            <div className="text-center" style={{ marginTop: "30px" }}>
+            <div className="new-items-controls">
               <button
                 type="button"
+                className="new-items-prev"
                 onClick={() => instanceRef.current?.prev()}
-                style={{ marginRight: "10px" }}
+                aria-label="Previous"
               >
-                Previous
+                <i className="fa fa-chevron-left"></i>
               </button>
 
               <button
                 type="button"
+                className="new-items-next"
                 onClick={() => instanceRef.current?.next()}
+                aria-label="Next"
               >
-                Next
+                <i className="fa fa-chevron-right"></i>
               </button>
             </div>
           </>
